@@ -203,7 +203,7 @@ def firecrest_config(
             compute_resource="MACHINE_NAME",
             small_file_size_mb=1.0,
             temp_directory=str(_temp_directory),
-           api_version="2",
+            api_version="2",
         )
 
 def submit(
