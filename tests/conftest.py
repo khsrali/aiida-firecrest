@@ -44,9 +44,10 @@ def firecrest_computer(firecrest_config):
         token_uri=firecrest_config.token_uri,
         client_id=firecrest_config.client_id,
         client_secret=firecrest_config.client_secret,
-        machine=firecrest_config.machine,
+        compute_resource=firecrest_config.compute_resource,
         small_file_size_mb=firecrest_config.small_file_size_mb,
         temp_directory=firecrest_config.temp_directory,
+        api_version=firecrest_config.api_version,
     )
     computer.store()
     return computer
@@ -199,10 +200,10 @@ def firecrest_config(
             token_uri="https://TOKEN_URI",
             client_id="CLIENT_ID",
             client_secret=str(_secret_path),
-            machine="MACHINE_NAME",
+            compute_resource="MACHINE_NAME",
             small_file_size_mb=1.0,
             temp_directory=str(_temp_directory),
-            workdir=workdir,
+           api_version="2",
         )
 
 def submit(
