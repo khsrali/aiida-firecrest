@@ -58,7 +58,7 @@ def test_validate_temp_directory(firecrest_config, monkeypatch, tmpdir: Path):
         "url": "http://test.com",
         "token_uri": "token_uri",
         "client_id": "client_id",
-        "client_machine": "client_machine",
+        "compute_resource": "compute_resource",
         "client_secret": secret_file.as_posix(),
         "small_file_size_mb": float(10),
     }
@@ -106,9 +106,10 @@ def test_dynamic_info(firecrest_config, monkeypatch, tmpdir: Path):
         "url": "http://test.com",
         "token_uri": "token_uri",
         "client_id": "client_id",
-        "client_machine": "client_machine",
+        "compute_resource": "compute_resource",
         "client_secret": secret_file.as_posix(),
         "small_file_size_mb": float(10),
+        "temp_directory": "temp_directory",
     }
 
     # should catch UTILITIES_MAX_FILE_SIZE if value is not provided
